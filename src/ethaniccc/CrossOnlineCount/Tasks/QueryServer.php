@@ -37,7 +37,7 @@ class QueryServer extends AsyncTask{
         if($entity === null) return;
         if($this->online !== -9999){
             $lines = explode("\n", $entity->getNameTag());
-			$lines[1] = TextFormat::YELLOW.$this->online." Online".TextFormat::WHITE;
+			$lines[1] = TextFormat::colorize("&7" . $this->online." &aPlayers".TextFormat::WHITE;
 			$nametag = implode("\n", $lines);
 			$entity->setNameTag($nametag);
         } else {
